@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Max.Core\Max.Domain.csproj" />
+    <ProjectReference Include="..\Max.Data\Max.Data.csproj" />
+  </ItemGroup>
+
+</Project>
