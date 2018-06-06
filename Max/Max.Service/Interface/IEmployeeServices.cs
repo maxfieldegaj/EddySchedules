@@ -17,6 +17,6 @@ namespace Max.Service.Interface
         // Update
         Employee UpdateEmployee(Employee updatedEmployee);
         // Delete
-        bool DeleteEmployee(int id);
+        bool DeleteEmployee(string id);
     }
 }

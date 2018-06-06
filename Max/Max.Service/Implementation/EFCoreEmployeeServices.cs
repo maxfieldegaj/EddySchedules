@@ -25,7 +25,7 @@ namespace Max.Service.Implementation
             return newEmployee;
         }
 
-        public bool DeleteEmployee(int id)
+        public bool DeleteEmployee(string id)
         {
             var employee = _dbContext.Employees.Find(id);
 

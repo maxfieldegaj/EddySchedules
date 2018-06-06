@@ -26,7 +26,7 @@ namespace Max.Service.Implementation
             return newManager;
         }
 
-        public bool DeleteManager(int id)
+        public bool DeleteManager(string id)
         {
             var manager = _dbContext.Managers.Find(id);
 

@@ -8,8 +8,8 @@ namespace Max.Service.Interface
     public interface IManagerServices
     {
         // Read
-        Manager GetSingleManagerById(int id);
-        List<Manager> GetManagersByBusinessId(int id);
+        Manager GetSingleManagerById(string id);
+        List<Manager> GetManagersByBusinessId(string id);
 
         // Create
         Manager CreateManager(Manager newManager);
