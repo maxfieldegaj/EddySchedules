@@ -40,7 +40,7 @@ namespace MaxEd.UI
                 .AddDefaultTokenProviders();
 
             services.AddDbContext<MaxDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("Filler")));
+            options.UseSqlServer(Configuration.GetConnectionString("EddyConnection")));
 
             services.AddMvc();
         }

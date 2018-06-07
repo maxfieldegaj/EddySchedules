@@ -6,7 +6,7 @@ namespace Max.Domain.Models
 {
     public class Manager : Person
     {
-        public List<DateTime> RequestedOff { get; set; }
+        public DateTime RequestedOff { get; set; }
 
     }
 }

@@ -35,6 +35,7 @@ namespace MaxEd.UI
                     //
                 }
             }
+
             host.Run();
         }
 

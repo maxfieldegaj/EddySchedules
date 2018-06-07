@@ -9,7 +9,7 @@ namespace Max.Service.Interface
     {
         // Read
         Manager GetSingleManagerById(string id);
-        List<Manager> GetManagersByBusinessId(string id);
+        List<Manager> GetManagersByBusinessId(int id);
 
         // Create
         Manager CreateManager(Manager newManager);
@@ -17,7 +17,7 @@ namespace Max.Service.Interface
         // Update
         Manager UpdateManager(Manager updatedManager);
         // Delete
-        bool DeleteManager(int id);
+        bool DeleteManager(string id);
 
     }
 }
