@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Max.Data.Migrations.MaxDb
+namespace Eddy.Data.Migrations
 {
-    public partial class InitEddyMig : Migration
+    public partial class EddyInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

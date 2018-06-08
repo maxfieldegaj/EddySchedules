@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Max.Core\Max.Domain.csproj" />
-    <ProjectReference Include="..\Max.Data\Max.Data.csproj" />
+    <ProjectReference Include="..\Max.Core\Eddy.Domain.csproj" />
+    <ProjectReference Include="..\Max.Data\Eddy.Data.csproj" />
   </ItemGroup>
 
 </Project>

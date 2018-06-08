@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace Max.Data.Migrations
+namespace Eddy.Data.Migrations.ApplicationUserDb
 {
-    public partial class InitAppUser : Migration
+    public partial class AppUserInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

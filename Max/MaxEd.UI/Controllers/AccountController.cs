@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Max.Domain.Models;
-using MaxEd.UI.ViewModels;
+using Eddy.Domain.Models;
+using Eddy.UI.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace MaxEd.UI.Controllers
+namespace EddyEd.UI.Controllers
 {
     public class AccountController : Controller
     {

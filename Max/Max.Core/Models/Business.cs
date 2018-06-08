@@ -1,8 +1,8 @@
-﻿using Max.Domain.Models;
+﻿using Eddy.Domain.Models;
 using System;
 using System.Collections.Generic;
 
-namespace Max.Domain.Models
+namespace Eddy.Domain.Models
 {
     public class Business
     {

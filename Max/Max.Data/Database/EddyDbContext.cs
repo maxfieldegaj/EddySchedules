@@ -1,12 +1,12 @@
-﻿using Max.Domain.Models;
+﻿using Eddy.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Max.Data.Database
+namespace Eddy.Data.Database
 {
-    public class MaxDbContext : DbContext
+    public class EddyDbContext : DbContext
     {
         public DbSet<Person> People { get; set; }
         public DbSet<Business> Businesses { get; set; }
@@ -14,7 +14,7 @@ namespace Max.Data.Database
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Shift> Schedules { get; set; }
 
-        public MaxDbContext(DbContextOptions<MaxDbContext> options)
+        public EddyDbContext(DbContextOptions<EddyDbContext> options)
             : base(options)
         {
 

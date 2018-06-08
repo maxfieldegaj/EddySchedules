@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using MaxEd.UI.Models;
+using Eddy.UI.Models;
 
-namespace MaxEd.UI.Controllers
+namespace Eddy.UI.Controllers
 {
     public class HomeController : Controller
     {

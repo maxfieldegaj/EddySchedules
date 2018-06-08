@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max.Android", "Max\Max.Android\Max.Android.csproj", "{39C55028-908A-4E24-8A96-8454AFA8690E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.Android", "Max\Max.Android\Eddy.Android.csproj", "{39C55028-908A-4E24-8A96-8454AFA8690E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max.iOS", "Max\Max.iOS\Max.iOS.csproj", "{64118ED1-9CD3-4B99-8F91-BAAE5633BE5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.iOS", "Max\Max.iOS\Eddy.iOS.csproj", "{64118ED1-9CD3-4B99-8F91-BAAE5633BE5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max.UWP", "Max\Max.UWP\Max.UWP.csproj", "{DBBF01D0-8CE6-440F-8DD8-7641A7FD2BB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.UWP", "Max\Max.UWP\Eddy.UWP.csproj", "{DBBF01D0-8CE6-440F-8DD8-7641A7FD2BB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Max", "Max\Max\Max.csproj", "{40642777-6949-4C60-9F4A-965ACC4B56DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy", "Max\Max\Eddy.csproj", "{40642777-6949-4C60-9F4A-965ACC4B56DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Max.Domain", "Max.Core\Max.Domain.csproj", "{8CDD6087-F302-484E-A8A8-C59706761D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.Domain", "Max.Core\Eddy.Domain.csproj", "{8CDD6087-F302-484E-A8A8-C59706761D68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Max.Service", "Max.Service\Max.Service.csproj", "{A67C4DB5-413E-48A1-BB16-636991B2D102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.Service", "Max.Service\Eddy.Service.csproj", "{A67C4DB5-413E-48A1-BB16-636991B2D102}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Max.Data", "Max.Data\Max.Data.csproj", "{8B7C05B1-9CD1-48FC-8E11-5707CC11CDF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.Data", "Max.Data\Eddy.Data.csproj", "{8B7C05B1-9CD1-48FC-8E11-5707CC11CDF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxEd.UI", "MaxEd.UI\MaxEd.UI.csproj", "{B37FCDC1-7B90-427B-84EA-E04C723639B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.UI", "MaxEd.UI\Eddy.UI.csproj", "{B37FCDC1-7B90-427B-84EA-E04C723639B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

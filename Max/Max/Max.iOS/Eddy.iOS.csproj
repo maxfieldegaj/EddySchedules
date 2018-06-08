@@ -123,9 +123,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Max\Max.csproj">
-      <Project>{238367A3-CC89-4714-B1AA-AAB1EE9ACC00}</Project>
-      <Name>Max</Name>
+    <ProjectReference Include="..\Max\Eddy.csproj">
+      <Project>{40642777-6949-4C60-9F4A-965ACC4B56DB}</Project>
+      <Name>Eddy</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

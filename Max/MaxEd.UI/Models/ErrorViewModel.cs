@@ -1,6 +1,6 @@
 using System;
 
-namespace MaxEd.UI.Models
+namespace Eddy.UI.Models
 {
     public class ErrorViewModel
     {

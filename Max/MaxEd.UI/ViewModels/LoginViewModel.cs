@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MaxEd.UI.ViewModels
+namespace Eddy.UI.ViewModels
 {
     public class LoginViewModel
     {

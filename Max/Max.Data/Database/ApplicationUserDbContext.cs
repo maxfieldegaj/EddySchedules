@@ -1,11 +1,11 @@
-﻿using Max.Domain.Models;
+﻿using Eddy.Domain.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Max.Data.Database
+namespace Eddy.Data.Database
 {
     public class ApplicationUserDbContext : IdentityDbContext<ApplicationUser>
     {

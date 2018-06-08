@@ -1,18 +1,18 @@
-﻿using Max.Data.Database;
-using Max.Domain.Models;
-using Max.Service.Interface;
+﻿using Eddy.Data.Database;
+using Eddy.Domain.Models;
+using Eddy.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Max.Service.Implementation
+namespace Eddy.Service.Implementation
 {
     public class EFCoreBusinessServices : IBusinessServices
     {
-        private readonly MaxDbContext _dbContext;
+        private readonly EddyDbContext _dbContext;
 
-        public EFCoreBusinessServices(MaxDbContext dbContext)
+        public EFCoreBusinessServices(EddyDbContext dbContext)
         {
             _dbContext = dbContext;
         }

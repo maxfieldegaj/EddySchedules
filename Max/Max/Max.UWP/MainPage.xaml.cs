@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Max.UWP
+namespace Eddy.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace Max.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Max.App());
+            LoadApplication(new Eddy.App());
         }
     }
 }

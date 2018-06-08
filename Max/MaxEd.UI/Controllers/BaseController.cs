@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Max.Domain.Models;
+using Eddy.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MaxEd.UI.Controllers
+namespace Eddy.UI.Controllers
 {
     public class BaseController : Controller
     {

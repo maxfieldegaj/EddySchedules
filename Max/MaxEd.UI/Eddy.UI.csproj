@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Max.Service\Max.Service.csproj" />
+    <ProjectReference Include="..\Max.Service\Eddy.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Max.Data.Database;
-using Max.Domain.Models;
-using Max.Service.Implementation;
-using Max.Service.Interface;
+using Eddy.Data.Database;
+using Eddy.Domain.Models;
+using Eddy.Service.Implementation;
+using Eddy.Service.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MaxEd.UI
+namespace Eddy.UI
 {
     public class Startup
     {
@@ -39,7 +39,7 @@ namespace MaxEd.UI
                 .AddEntityFrameworkStores<ApplicationUserDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddDbContext<MaxDbContext>(options =>
+            services.AddDbContext<EddyDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("EddyConnection")));
 
             services.AddMvc();

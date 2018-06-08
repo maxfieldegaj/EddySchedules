@@ -1,4 +1,4 @@
-﻿using Max.Data.Database;
+﻿using Eddy.Data.Database;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Max.Data.Seeding
+namespace Eddy.Data.Seeding
 {
     public static class DbInitializer
     {
-        public static void Init(ApplicationUserDbContext appUserDbContext, MaxDbContext maxDbContext)
+        public static void Init(ApplicationUserDbContext appUserDbContext, EddyDbContext EddyDbContext)
         {
             appUserDbContext.Database.Migrate();
-            maxDbContext.Database.Migrate();
+            EddyDbContext.Database.Migrate();
 
             if (!appUserDbContext.Roles.Any())
             {

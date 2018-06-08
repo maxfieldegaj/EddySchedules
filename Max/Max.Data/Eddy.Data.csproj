@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Max.Core\Max.Domain.csproj" />
+    <ProjectReference Include="..\Max.Core\Eddy.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
-﻿using Max.Domain.Models;
+﻿using Eddy.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Max.Service.Interface
+namespace Eddy.Service.Interface
 {
     public interface IBusinessServices
     {

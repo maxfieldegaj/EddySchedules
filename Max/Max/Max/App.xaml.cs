@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace Max
+namespace Eddy
 {
 	public partial class App : Application
 	{
@@ -13,7 +13,7 @@ namespace Max
 		{
 			InitializeComponent();
 
-			MainPage = new Max.MainPage();
+			MainPage = new Eddy.MainPage();
 		}
 
 		protected override void OnStart ()

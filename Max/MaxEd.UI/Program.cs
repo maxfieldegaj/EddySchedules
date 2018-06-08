@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Max.Data.Database;
-using Max.Data.Seeding;
+using Eddy.Data.Database;
+using Eddy.Data.Seeding;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace MaxEd.UI
+namespace Eddy.UI
 {
     public class Program
     {
@@ -26,7 +26,7 @@ namespace MaxEd.UI
                 try
                 {
                     var appUserDbCOntext = services.GetRequiredService<ApplicationUserDbContext>();
-                    var maxDbContext = services.GetRequiredService<MaxDbContext>();
+                    var maxDbContext = services.GetRequiredService<EddyDbContext>();
 
                     DbInitializer.Init(appUserDbCOntext, maxDbContext);
                 }

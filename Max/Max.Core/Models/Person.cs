@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Max.Domain.Models
+namespace Eddy.Domain.Models
 {
     public class Person
     {
