@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #8C9EFF;
 }
 
 /* Wrapping element */
@@ -10,4 +11,12 @@
     padding-right: 15px;
 }
 
+footer{
+    color: white;
+}
+
+#homeSquare1{
+    background-color: #FFEB3B;
+    height: 200px;
+}
 

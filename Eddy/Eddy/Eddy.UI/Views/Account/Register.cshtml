@@ -1,0 +1,52 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Create your Eddy Account</h2>
+
+<div class="container">
+    <form asp-controller="Account" asp-action="Register" class="registerForm col-md-10" style="clear:right" method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="row">
+            <div class="input-group">
+                <label asp-for="Email"></label><br />
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label asp-for="Password"></label><br />
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label asp-for="ConfirmedPassword"></label><br />
+                <input asp-for="ConfirmedPassword" />
+                <span asp-validation-for="ConfirmedPassword"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label asp-for="ApplicationUser.FirstName"></label><br />
+                <input asp-for="ApplicationUser.FirstName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label asp-for="ApplicationUser.LastName"></label><br>
+                <input asp-for="ApplicationUser.LastName" />
+            </div>
+        </div>
+        @*<div class="input-field row">
+            <div class="input-field col s10">
+                <select asp-for="Role" asp-items="@Model.Roles"></select>
+                <label asp-for="Role"></label>
+            </div>*@
+
+        <button class="waves-effect waves-light btn" type="submit">Register</button>
+    </form>
+</div>
