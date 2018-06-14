@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.UI", "Eddy.UI\Eddy.UI.csproj", "{42A21EB3-D0E7-455C-A775-5EFE107D9801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.UI", "Eddy.UI\Eddy.UI.csproj", "{42A21EB3-D0E7-455C-A775-5EFE107D9801}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.Data", "Eddy.Data\Eddy.Data.csproj", "{61179E6B-821E-4F0D-8F6C-B218C80BD242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.Data", "Eddy.Data\Eddy.Data.csproj", "{61179E6B-821E-4F0D-8F6C-B218C80BD242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.Domain", "Eddy.Domain\Eddy.Domain.csproj", "{5789744A-73AB-4B82-B01B-3B63B54F9E89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.Domain", "Eddy.Domain\Eddy.Domain.csproj", "{5789744A-73AB-4B82-B01B-3B63B54F9E89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eddy.Services", "Eddy.Services\Eddy.Services.csproj", "{DC6E2A84-B092-4D6B-B635-1A5B8F6988BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eddy.Services", "Eddy.Services\Eddy.Services.csproj", "{DC6E2A84-B092-4D6B-B635-1A5B8F6988BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

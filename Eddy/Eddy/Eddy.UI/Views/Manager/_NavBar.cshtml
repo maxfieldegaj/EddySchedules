@@ -1,0 +1,27 @@
+﻿@model ManagerNavBarViewModel
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="Logo" asp-controller="Home" asp-action="Index" class="navbar-brand">Eddy</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a id="Highlight" asp-controller="Home" asp-action="Index">Schedules</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Requests</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Messages</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Contacts</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">My Availability</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>

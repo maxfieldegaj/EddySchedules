@@ -5,3 +5,10 @@
 
 <h2>Index</h2>
 
+@{ 
+    EmployeeNavBarViewModel viewModel = new EmployeeNavBarViewModel();
+
+}
+@section Navbar{ 
+    @Html.Partial("_NavBar", viewModel)
+}
