@@ -12,5 +12,30 @@ namespace Eddy.UI.Controllers
         {
             return View();
         }
+
+        public IActionResult Requests()
+        {
+            return View();
+        }
+
+        public IActionResult Messages()
+        {
+            return View();
+        }
+
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
+        public IActionResult Availability()
+        {
+            return View();
+        }
+
+        public IActionResult Settings()
+        {
+            return View();
+        }
     }
 }
