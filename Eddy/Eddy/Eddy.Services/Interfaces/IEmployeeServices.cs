@@ -8,7 +8,7 @@ namespace Eddy.Services.Interfaces
     public interface IEmployeeServices
     {
         // Read
-        Employee GetSingleEmployeeById(string id);
+        Employee GetSingleEmployeeById(int id);
         List<Employee> GetEmployeesByCompanyId(int id);
 
         // Create
@@ -17,6 +17,6 @@ namespace Eddy.Services.Interfaces
         // Update
         Employee UpdateEmployee(Employee updatedEmployee);
         // Delete
-        bool DeleteEmployee(string id);
+        bool DeleteEmployee(int id);
     }
 }
