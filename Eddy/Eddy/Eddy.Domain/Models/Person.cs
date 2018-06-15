@@ -15,5 +15,6 @@ namespace Eddy.Domain.Models
         public DateTime RequestedOff { get; set; }
 
         public Business PlaceOfBusiness { get; set; }
+        public List<Message> Messages { get; set; }
     }
 }
