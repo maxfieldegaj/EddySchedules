@@ -2,6 +2,7 @@
 using Eddy.Domain.Models;
 using Eddy.Services.Implementations;
 using Eddy.Services.Interfaces;
+using Eddy.Services.Mock;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -23,10 +24,12 @@ namespace Eddy.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IBusinessServices, EFCoreBusinessServices>();
-            services.AddScoped<IEmployeeServices, EFCoreEmployeeServices>();
-            services.AddScoped<IManagerServices, EFCoreManagerServices>();
-            services.AddScoped<IShiftServices, EFCoreShiftServices>();
+            services.AddScoped<IBusinessServices, MockBusinessServices>();
+            services.AddScoped<IEmployeeServices, MockEmployeeServices>();
+            services.AddScoped<IManagerServices, MockManagerServices>();
+            services.AddScoped<IShiftServices, MockShiftServices>();
+            services.AddScoped<IMessageServices, MockMessageServices>();
+
 
             services.AddDbContext<ApplicationUserDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("AppIdentityConnection")));

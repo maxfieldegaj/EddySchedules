@@ -26,7 +26,7 @@ namespace Eddy.Services.Implementations
             return newManager;
         }
 
-        public bool DeleteManager(string id)
+        public bool DeleteManager(int id)
         {
             var manager = _dbContext.Managers.Find(id);
 
@@ -43,7 +43,7 @@ namespace Eddy.Services.Implementations
         public List<Manager> GetManagersByBusinessId(int id) => _dbContext.Managers
             .Where(m => m.PlaceOfBusiness.Id == id).ToList();
 
-        public Manager GetSingleManagerById(string id) => _dbContext.Managers.Find(id);
+        public Manager GetSingleManagerById(int id) => _dbContext.Managers.Find(id);
 
         public Manager UpdateManager(Manager updatedManager)
         {

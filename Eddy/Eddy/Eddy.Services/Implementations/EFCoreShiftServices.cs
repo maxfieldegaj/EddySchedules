@@ -40,7 +40,7 @@ namespace Eddy.Services.Implementations
             return false;
         }
 
-        public List<Shift> GetScheduleByEmployeeId(string id)
+        public List<Shift> GetScheduleByEmployeeId(int id)
         {
             return _dbContext.Schedules.Where(s => s.EmployeeID == id).ToList();
         }
