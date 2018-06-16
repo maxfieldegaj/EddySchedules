@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Eddy.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eddy.UI.Controllers
 {
     [Authorize(Roles = "Employee")]
-    public class EmployeeController : Controller
+    public class EmployeeController : BaseController
     {
+        public EmployeeController(UserManager<ApplicationUser> userManager) : base(userManager)
+        {
+        }
+
         public IActionResult Index()
         {
             return View();
