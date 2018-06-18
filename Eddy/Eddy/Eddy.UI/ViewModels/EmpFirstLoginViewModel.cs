@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Eddy.UI.ViewModels
 {
-    public class ManagerNavBarViewModel
+    public class EmpFirstLoginViewModel
     {
         public ApplicationUser AppUser { get; set; }
-        public Manager Manager { get; set; }
+        public Employee Employee { get; set; }
     }
 }

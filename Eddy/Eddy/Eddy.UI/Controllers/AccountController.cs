@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Eddy.Domain.Models;
+using Eddy.Services.Interfaces;
 using Eddy.UI.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -69,13 +70,13 @@ namespace Eddy.UI.Controllers
 
                         if (viewModel.Role == "Employee")
                         {
-                            return RedirectToAction("Index", "Employee");
+                            return RedirectToAction("FirstLogin", "Employee");
                         }
 
                         if (viewModel.Role == "Manager")
                         {
 
-                            return RedirectToAction("Index", "Manager");
+                            return RedirectToAction("FirstLogin", "Manager");
                         }
                     }
 
@@ -113,12 +114,25 @@ namespace Eddy.UI.Controllers
 
                     if (isManager)
                     {
-                        return RedirectToAction("Index", "Manager");
+                        if (user.Verified)
+                        {
+                            return RedirectToAction("Index", "Manager");
+                        }
+                        else
+                        {
+                            return RedirectToAction("FirstLogin", "Manager");
+                        }
                     }
                     if (isEmployee)
                     {
-                        return RedirectToAction("Index", "Employee");
-
+                        if (user.Verified)
+                        {
+                            return RedirectToAction("Index", "Employee");
+                        }
+                        else
+                        {
+                            return RedirectToAction("FirstLogin", "Employee");
+                        }
                     }
                 }
                 else

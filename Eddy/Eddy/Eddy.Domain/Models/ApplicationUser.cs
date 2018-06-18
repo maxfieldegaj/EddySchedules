@@ -15,5 +15,7 @@ namespace Eddy.Domain.Models
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+
+        public bool Verified { get; set; }
     }
 }
