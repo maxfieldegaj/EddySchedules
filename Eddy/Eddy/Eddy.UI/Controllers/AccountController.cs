@@ -49,7 +49,9 @@ namespace Eddy.UI.Controllers
                 var newUser = new ApplicationUser
                 {
                     Email = viewModel.Email,
-                    UserName = viewModel.Email
+                    UserName = viewModel.Email,
+                    FirstName = viewModel.FirstName,
+                    LastName = viewModel.LastName
                 };
 
                 var result = await _userManager.CreateAsync(newUser, viewModel.Password);

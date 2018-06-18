@@ -15,27 +15,27 @@ namespace Eddy.Data.Seeding
             appUserDbContext.Database.Migrate();
             EddyDbContext.Database.Migrate();
 
-            if (!appUserDbContext.Roles.Any())
-            {
-                AddRoles(appUserDbContext);
-            }
+            //if (!appUserDbContext.Roles.Any())
+            //{
+            //    AddRoles(appUserDbContext);
+            //}
         }
 
-        public static void AddRoles(ApplicationUserDbContext appUserDbContext)
-        {
-            string[] roles = new string[] { "Manager", "Employee" };
+        //public static void AddRoles(ApplicationUserDbContext appUserDbContext)
+        //{
+        //    string[] roles = new string[] { "Manager", "Employee" };
 
-            foreach (var r in roles)
-            {
-                var newrole = new IdentityRole
-                {
-                    Name = r,
-                    NormalizedName = r.ToUpper()
-                };
+        //    foreach (var r in roles)
+        //    {
+        //        var newrole = new IdentityRole
+        //        {
+        //            Name = r,
+        //            NormalizedName = r.ToUpper()
+        //        };
 
-                appUserDbContext.Roles.Add(newrole);
-            }
-            appUserDbContext.SaveChanges();
-        }
+        //        appUserDbContext.Roles.Add(newrole);
+        //    }
+        //    appUserDbContext.SaveChanges();
+        //}
     }
 }

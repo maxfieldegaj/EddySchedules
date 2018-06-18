@@ -26,9 +26,9 @@ namespace Eddy.UI
                 try
                 {
                     var appUserDbCOntext = services.GetRequiredService<ApplicationUserDbContext>();
-                    var maxDbContext = services.GetRequiredService<EddyDbContext>();
+                    var eddyDbContext = services.GetRequiredService<EddyDbContext>();
 
-                    DbInitializer.Init(appUserDbCOntext, maxDbContext);
+                    DbInitializer.Init(appUserDbCOntext, eddyDbContext);
                 }
                 catch (Exception ex)
                 {
