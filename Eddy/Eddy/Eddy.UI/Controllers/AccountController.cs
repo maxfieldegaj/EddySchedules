@@ -108,7 +108,7 @@ namespace Eddy.UI.Controllers
                 if (result.Succeeded) // Credentials are correct
                 {
                     var user = await _userManager.FindByEmailAsync(viewModel.Email);
-                    var isManager = await _userManager.IsInRoleAsync(user, "Landlord");
+                    var isManager = await _userManager.IsInRoleAsync(user, "Manager");
                     var isEmployee = await _userManager.IsInRoleAsync(user, "Employee");
 
                     if (isManager)
