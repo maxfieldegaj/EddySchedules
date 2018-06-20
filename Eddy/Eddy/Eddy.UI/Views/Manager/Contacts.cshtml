@@ -1,11 +1,20 @@
-﻿
+﻿@model ContactsViewModel
 @{
     ViewData["Title"] = "Contacts";
 }
 
+@foreach (var b in Model.PlaceOfBusiness.Staff)
+{
+    if (b.CurrentlyEmployed == true)
+    {
+        <div>@b.FirstName @b.LastName - @b.PhoneNumber - @b.Email</div>
+
+    }
+
+
+}
+
 <h2>Contacts</h2>
-
-
 
 @section Navbar{
     @Html.Partial("_NavBar")

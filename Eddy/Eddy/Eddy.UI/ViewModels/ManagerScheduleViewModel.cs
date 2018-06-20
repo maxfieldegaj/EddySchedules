@@ -15,6 +15,7 @@ namespace Eddy.UI.ViewModels
         public List<Person> Staff { get; set; }
         public List<Employee> EmpStaff { get; set; }
         public List<Manager> MgrStaff { get; set; }
+        public Person Person { get; set; }
         
     }
 }

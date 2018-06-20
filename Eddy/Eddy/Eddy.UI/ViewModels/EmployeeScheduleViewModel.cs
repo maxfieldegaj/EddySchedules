@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Eddy.UI.ViewModels
 {
-    public class ContactsViewModel
+    public class EmployeeScheduleViewModel
     {
+        public List<Shift> Schedule { get; set; }
         public Business PlaceOfBusiness { get; set; }
     }
 }

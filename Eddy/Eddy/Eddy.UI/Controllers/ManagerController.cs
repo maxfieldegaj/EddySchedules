@@ -47,6 +47,7 @@ namespace Eddy.UI.Controllers
             return claims[0].Value;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var manager = await GetApplicationUser();
@@ -56,6 +57,14 @@ namespace Eddy.UI.Controllers
             
             return View(model);
         }
+        [HttpPost]
+        public IActionResult Index(ManagerScheduleViewModel viewModel)
+        {
+            var newSchedule = viewModel.Person.Schedule;
+            viewModel.VisibleSchedule = newSchedule;
+            return View(viewModel);
+        }
+        
 
         public IActionResult FirstLogin()
         {
@@ -78,9 +87,15 @@ namespace Eddy.UI.Controllers
             return View();
         }
 
-        public IActionResult Contacts()
+        public async Task<IActionResult> Contacts()
         {
-            return View();
+            var user = await GetApplicationUser();
+            var model = new ContactsViewModel();
+            var biz = _employeeServices.GetSingleEmployeeById(user.Id).PlaceOfBusiness;
+
+            model.PlaceOfBusiness = biz;
+
+            return View(model);
         }
 
         public IActionResult Availability()

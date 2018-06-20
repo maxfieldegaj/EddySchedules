@@ -38,9 +38,16 @@ namespace Eddy.UI.Controllers
             _environment = environment;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var user = await GetApplicationUser();
+            var model = new EmployeeScheduleViewModel();
+            var biz = _employeeServices.GetSingleEmployeeById(user.Id).PlaceOfBusiness;
+            var schedule = _shiftServices.GetAllShiftsByBusinessId(biz.Id);
+
+            model.Schedule = schedule;
+            model.PlaceOfBusiness = biz;
+            return View(model);
         }
 
         public IActionResult FirstLogin()
@@ -69,27 +76,15 @@ namespace Eddy.UI.Controllers
             return View();
         }
 
-        [HttpGet]
         public async Task<IActionResult> Contacts()
         {
             var user = await GetApplicationUser();
             var model = new ContactsViewModel();
-
             var biz = _employeeServices.GetSingleEmployeeById(user.Id).PlaceOfBusiness;
 
-            var schedule = _shiftServices.GetAllShiftsByBusinessId(biz.Id);
-            model.Schedule = schedule;
             model.PlaceOfBusiness = biz;
 
             return View(model);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Contacts(ContactsViewModel viewModel)
-        {
-            var newSchedule = viewModel.Person.Schedule;
-            viewModel.Schedule = newSchedule;
-            return View(viewModel);
         }
 
         public IActionResult Settings()
