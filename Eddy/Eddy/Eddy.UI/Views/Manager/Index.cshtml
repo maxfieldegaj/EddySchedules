@@ -1,9 +1,27 @@
 ﻿@model ManagerScheduleViewModel
+@model ManagerScheduleViewModel
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Schedule</h2>
+
+@foreach(var s in Model.AllEmployeeSchedule)
+{
+    <div>
+        @s.StartTime
+        @s.EndTime
+        @if(s.Assigned == true)
+        {
+            @s.AssignedTo.FirstName @s.AssignedTo.LastName
+        }
+        else
+        {
+        <p>Shift is unassigned.</p>
+        }
+    </div>
+
+}
 
 @section Navbar{
     @Html.Partial("_NavBar")
