@@ -25,7 +25,7 @@ namespace Eddy.Services.Implementations
             return newEmployee;
         }
 
-        public bool DeleteEmployee(int id)
+        public bool DeleteEmployee(string id)
         {
             var employee = _dbContext.Employees.Find(id);
 
@@ -42,7 +42,7 @@ namespace Eddy.Services.Implementations
         public List<Employee> GetEmployeesByCompanyId(int id) => _dbContext.Employees
             .Where(e => e.PlaceOfBusiness.Id == id).ToList();
 
-        public Employee GetSingleEmployeeById(int id) => _dbContext.Employees.Find(id);
+        public Employee GetSingleEmployeeById(string id) => _dbContext.Employees.Find(id);
 
         public Employee UpdateEmployee(Employee updatedEmployee)
         {

@@ -17,5 +17,6 @@ namespace Eddy.Services.Interfaces
         Business UpdateBusiness(Business updatedBusiness);
         // Delete
         bool DeleteBusiness(int id);
+
     }
 }

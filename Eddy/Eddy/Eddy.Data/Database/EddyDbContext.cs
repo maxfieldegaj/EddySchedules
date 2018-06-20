@@ -13,6 +13,9 @@ namespace Eddy.Data.Database
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Shift> Schedules { get; set; }
+        public DbSet<Message> SentMessages { get; set; }
+        public DbSet<Message> ReceivedMessages { get; set; }
+        public DbSet<Message> DeletedMessages { get; set; }
 
         public EddyDbContext(DbContextOptions<EddyDbContext> options)
             : base(options)

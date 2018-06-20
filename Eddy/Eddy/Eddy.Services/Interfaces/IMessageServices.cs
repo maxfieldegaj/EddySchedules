@@ -10,12 +10,19 @@ namespace Eddy.Services.Interfaces
         // Read
         Message GetSingleMessageById(int id);
 
+        List<Message> GetAllMessagesBySenderId(string Id);
+
+        List<Message> GetAllMessagesByRecipientId(string Id);
+
         // Create
         Message CreateMessage(Message newMessage);
 
-        // Update
-        Message UpdateMessage(Message updatedMessage);
         // Delete
-        bool DeleteMessage(int id);
+        bool DeleteSentMessage(int id);
+
+        bool DeleteReceivedMessage(int id);
+
+        
+
     }
 }

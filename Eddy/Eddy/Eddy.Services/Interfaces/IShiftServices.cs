@@ -9,7 +9,7 @@ namespace Eddy.Services.Interfaces
     {
         // Read
         Shift GetSingleShiftById(int id);
-        List<Shift> GetScheduleByEmployeeId(int id);
+        List<Shift> GetScheduleByEmployeeId(string id);
 
         // Create
         Shift CreateShift(Shift newShift);
@@ -18,5 +18,7 @@ namespace Eddy.Services.Interfaces
         Shift UpdateShift(Shift updatedShift);
         // Delete
         bool DeleteShift(int id);
+
+        List<Shift> GetAllShiftsByBusinessId(int Id);
     }
 }

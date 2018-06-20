@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Eddy.Domain.Models;
 using Eddy.Services.Interfaces;
+using Eddy.UI.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -68,9 +69,27 @@ namespace Eddy.UI.Controllers
             return View();
         }
 
-        public IActionResult Contacts()
+        [HttpGet]
+        public async Task<IActionResult> Contacts()
         {
-            return View();
+            var user = await GetApplicationUser();
+            var model = new ContactsViewModel();
+
+            var biz = _employeeServices.GetSingleEmployeeById(user.Id).PlaceOfBusiness;
+
+            var schedule = _shiftServices.GetAllShiftsByBusinessId(biz.Id);
+            model.Schedule = schedule;
+            model.PlaceOfBusiness = biz;
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Contacts(ContactsViewModel viewModel)
+        {
+            var newSchedule = viewModel.Person.Schedule;
+            viewModel.Schedule = newSchedule;
+            return View(viewModel);
         }
 
         public IActionResult Settings()

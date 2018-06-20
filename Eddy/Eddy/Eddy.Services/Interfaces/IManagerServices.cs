@@ -8,7 +8,7 @@ namespace Eddy.Services.Interfaces
     public interface IManagerServices
     {
         // Read
-        Manager GetSingleManagerById(int id);
+        Manager GetSingleManagerById(string id);
         List<Manager> GetManagersByBusinessId(int id);
 
         // Create
@@ -17,6 +17,6 @@ namespace Eddy.Services.Interfaces
         // Update
         Manager UpdateManager(Manager updatedManager);
         // Delete
-        bool DeleteManager(int id);
+        bool DeleteManager(string id);
     }
 }
