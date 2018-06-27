@@ -19,15 +19,13 @@ namespace Eddy.Services.Mock
 
         public Employee CreateEmployee(Employee newEmployee)
         {
-            int largestId = _context.OrderByDescending(e => e.ID).FirstOrDefault().ID;
-
-            newEmployee.ID = largestId + 1;
+            
             _context.Add(newEmployee);
 
             return newEmployee;
         }
 
-        public bool DeleteEmployee(int id)
+        public bool DeleteEmployee(string id)
         {
             Employee toBeDeleted = GetSingleEmployeeById(id);
             _context.Remove(toBeDeleted);
@@ -45,7 +43,7 @@ namespace Eddy.Services.Mock
 
         public List<Employee> GetEmployeesByCompanyId(int id) => _context.Where(b => b.PlaceOfBusiness.Id == id).ToList();
 
-        public Employee GetSingleEmployeeById(int id) => _context.Find(b => b.ID == id);
+        public Employee GetSingleEmployeeById(string id) => _context.Find(b => b.ID == id);
 
         public Employee UpdateEmployee(Employee updatedEmployee)
         {

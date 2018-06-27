@@ -20,15 +20,12 @@ namespace Eddy.Services.Mock
 
         public Manager CreateManager(Manager newManager)
         {
-            int largestId = _context.OrderByDescending(e => e.ID).FirstOrDefault().ID;
-
-            newManager.ID = largestId + 1;
             _context.Add(newManager);
 
             return newManager;
         }
 
-        public bool DeleteManager(int id)
+        public bool DeleteManager(string id)
         {
             Manager toBeDeleted = GetSingleManagerById(id);
             _context.Remove(toBeDeleted);
@@ -46,7 +43,7 @@ namespace Eddy.Services.Mock
 
         public List<Manager> GetManagersByBusinessId(int id) => _context.Where(b => b.PlaceOfBusiness.Id == id).ToList();
 
-        public Manager GetSingleManagerById(int id) => _context.Find(b => b.ID == id);
+        public Manager GetSingleManagerById(string id) => _context.Find(b => b.ID == id);
 
         public Manager UpdateManager(Manager updatedManager)
         {

@@ -56,9 +56,9 @@ namespace Eddy.Services.Implementations
             return false;
         }
 
-        public List<Message> GetAllMessagesByRecipientId(string Id) => _dbContext.ReceivedMessages.Where(r => r.Recipient.Id == Id).ToList();
+        public List<Message> GetAllMessagesByRecipientId(string Id) => _dbContext.ReceivedMessages.Where(r => r.Recipient.ID == Id).ToList();
 
-        public List<Message> GetAllMessagesBySenderId(string Id) => _dbContext.SentMessages.Where(s => s.Sender.Id == Id).ToList();
+        public List<Message> GetAllMessagesBySenderId(string Id) => _dbContext.SentMessages.Where(s => s.Sender.ID == Id).ToList();
 
         public Message GetSingleMessageById(int id) => _dbContext.ReceivedMessages.Find(id);
     }

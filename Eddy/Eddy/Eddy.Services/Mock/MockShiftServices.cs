@@ -43,7 +43,12 @@ namespace Eddy.Services.Mock
             }
         }
 
-        public List<Shift> GetScheduleByEmployeeId(int id) => _context.Where(s => s.EmployeeID == id).ToList();
+        public List<Shift> GetAllShiftsByBusinessId(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Shift> GetScheduleByEmployeeId(string id) => _context.Where(s => s.AssignedTo.ID == id).ToList();
 
         public Shift GetSingleShiftById(int id) => _context.Find(s => s.ID == id);
 

@@ -24,11 +24,11 @@ namespace Eddy.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IBusinessServices, MockBusinessServices>();
-            services.AddScoped<IEmployeeServices, MockEmployeeServices>();
-            services.AddScoped<IManagerServices, MockManagerServices>();
-            services.AddScoped<IShiftServices, MockShiftServices>();
-            services.AddScoped<IMessageServices, MockMessageServices>();
+            services.AddScoped<IBusinessServices, EFCoreBusinessServices>();
+            services.AddScoped<IEmployeeServices, EFCoreEmployeeServices>();
+            services.AddScoped<IManagerServices, EFCoreManagerServices>();
+            services.AddScoped<IShiftServices, EFCoreShiftServices>();
+            services.AddScoped<IMessageServices, EFCoreMessageServices>();
 
 
             services.AddDbContext<ApplicationUserDbContext>(options =>
