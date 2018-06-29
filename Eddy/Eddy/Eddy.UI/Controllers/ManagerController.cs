@@ -78,10 +78,8 @@ namespace Eddy.UI.Controllers
         [HttpPost]
         public IActionResult FirstLogin(MgrFirstLoginViewModel model)
         {
-            if (model.NewBusiness)
-            {
-                _businessServices.CreateBusiness(model.Business);
-            }
+            var biz = _businessServices.CreateIdentifierString(model.Business);
+            _businessServices.CreateBusiness(biz);
             
             return RedirectToAction("Index");
         }

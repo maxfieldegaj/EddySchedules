@@ -11,7 +11,9 @@ namespace Eddy.Services.Interfaces
         Business GetSingleBusinessById(int id);
         List<Business> GetAllBusinesses();
         // Create
+        Business CreateIdentifierString(Business business);
         Business CreateBusiness(Business newBusiness);
+
 
         // Update
         Business UpdateBusiness(Business updatedBusiness);

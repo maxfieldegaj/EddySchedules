@@ -9,6 +9,7 @@ namespace Eddy.Domain.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Business Name")]
         [Required(ErrorMessage = "Business Name Required")]
         public string Name { get; set; }
 
@@ -33,6 +34,8 @@ namespace Eddy.Domain.Models
 
         public List<Business> AffiliatedBusinesses { get; set; }
         public string PhoneNumber { get; set; }
+
+        public string IdentifierString { get; set; }
         public List<Shift> Schedule { get; set; }
         public List<Employee> Staff { get; set; }
         public List<Manager> Managers { get; set; }

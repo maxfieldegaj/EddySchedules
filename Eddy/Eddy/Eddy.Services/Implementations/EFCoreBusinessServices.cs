@@ -25,6 +25,13 @@ namespace Eddy.Services.Implementations
             return newBusiness;
         }
 
+        public Business CreateIdentifierString(Business business)
+        {
+            business.IdentifierString = $"{business.Name}, {business.StreetNumber} {business.StreetName} {business.City}, {business.State} {business.ZipCode}";
+
+            return business;
+        }
+
         public bool DeleteBusiness(int id)
         {
             var business = _dbContext.Businesses.Find(id);
