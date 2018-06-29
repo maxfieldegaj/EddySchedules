@@ -2,7 +2,6 @@
 using Eddy.Domain.Models;
 using Eddy.Services.Implementations;
 using Eddy.Services.Interfaces;
-using Eddy.Services.Mock;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;

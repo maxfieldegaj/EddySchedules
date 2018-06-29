@@ -70,7 +70,7 @@ namespace Eddy.UI.Controllers
 
                         if (viewModel.Role == "Employee")
                         {
-                            return RedirectToAction("FirstLogin", "Employee");
+                            return RedirectToAction("Index", "Employee");
                         }
 
                         if (viewModel.Role == "Manager")

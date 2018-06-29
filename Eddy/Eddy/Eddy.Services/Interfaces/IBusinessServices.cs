@@ -9,7 +9,7 @@ namespace Eddy.Services.Interfaces
     {
         // Read
         Business GetSingleBusinessById(int id);
-
+        List<Business> GetAllBusinesses();
         // Create
         Business CreateBusiness(Business newBusiness);
 
@@ -17,6 +17,8 @@ namespace Eddy.Services.Interfaces
         Business UpdateBusiness(Business updatedBusiness);
         // Delete
         bool DeleteBusiness(int id);
+
+
 
     }
 }

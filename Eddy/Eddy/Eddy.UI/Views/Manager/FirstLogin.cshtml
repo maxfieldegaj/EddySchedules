@@ -1,7 +1,79 @@
-﻿
+﻿@model MgrFirstLoginViewModel
 @{
     ViewData["Title"] = "FirstLogin";
 }
 
-<h2>FirstLogin</h2>
+<h2>Welcome, @Model.Manager.FirstName</h2>
+
+<h3>First things first, let's set up your place of work.</h3>
+<form>
+    <div>
+        <input asp-for="NewBusiness" />
+        <label asp-for="NewBusiness"></label>
+    </div>
+</form>
+
+
+@if (Model.NewBusiness)
+{
+    <div class="container">
+        <form asp-controller="Manager" asp-action="FirstLogin" class="registerForm col-md-10" style="clear:right" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="row">
+                <div class="input-group">
+                    <label asp-for="Business.Name"></label><br />
+                    <input asp-for="Business.Name" />
+                    <span asp-validation-for="Business.Name"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label asp-for="Business.StreetNumber"></label><br />
+                    <input asp-for="Business.StreetNumber" />
+                    <span asp-validation-for="Business.StreetNumber"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label asp-for="Business.StreetName"></label><br />
+                    <input asp-for="Business.StreetName" />
+                    <span asp-validation-for="Business.StreetName"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label asp-for="Business.City"></label><br />
+                    <input asp-for="Business.City" />
+                    <span asp-validation-for="Business.City"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label asp-for="Business.State"></label><br />
+                    <input asp-for="Business.State" />
+                    <span asp-validation-for="Business.State"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label asp-for="Business.ZipCode"></label><br />
+                    <input asp-for="Business.ZipCode" />
+                    <span asp-validation-for="Business.ZipCode"></span>
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn" type="submit">Submit</button>
+        </form>
+    </div>
+}
+else
+{
+    <div>Choose from the following businesses</div>
+    <div class="input-field row">
+        <div class="input-field col s10">
+            @Html.DropDownList("Business", new SelectList(Model.AllBusinesses))
+        </div>
+    </div>
+
+}
+
 

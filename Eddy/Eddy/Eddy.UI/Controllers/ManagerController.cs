@@ -65,10 +65,25 @@ namespace Eddy.UI.Controllers
             return View(viewModel);
         }
         
-
-        public IActionResult FirstLogin()
+        [HttpGet]
+        public async Task<IActionResult> FirstLogin()
         {
-            return View();
+            var model = new MgrFirstLoginViewModel();
+            model.Manager = await GetApplicationUser();
+            model.AllBusinesses = _businessServices.GetAllBusinesses();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult FirstLogin(MgrFirstLoginViewModel model)
+        {
+            if (model.NewBusiness)
+            {
+                _businessServices.CreateBusiness(model.Business);
+            }
+            
+            return RedirectToAction("Index");
         }
 
         public IActionResult CreateManager(Manager newManager)
