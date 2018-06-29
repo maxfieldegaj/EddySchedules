@@ -14,11 +14,6 @@ namespace Eddy.Data.Seeding
         {
             appUserDbContext.Database.Migrate();
             EddyDbContext.Database.Migrate();
-
-            //if (!appUserDbContext.Roles.Any())
-            //{
-            //    AddRoles(appUserDbContext);
-            //}
         }
 
         //public static void AddRoles(ApplicationUserDbContext appUserDbContext)

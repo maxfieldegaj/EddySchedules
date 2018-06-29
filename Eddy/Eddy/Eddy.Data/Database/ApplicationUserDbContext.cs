@@ -28,8 +28,9 @@ namespace Eddy.Data.Database
 
                     Roles.Add(newrole);
                 }
+                SaveChanges();
             }
-            
+
         }
     }
 }
